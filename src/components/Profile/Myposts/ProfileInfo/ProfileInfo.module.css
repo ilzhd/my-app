@@ -1,0 +1,12 @@
+.descriptionBlock{
+    padding: 10px;
+}
+
+.item{
+    background: url("https://www.stevens.edu/sites/stevens_edu/files/pictures/business/1000x300-bia.jpg");
+    opacity: 0.7;
+    width: 1000px;
+    height: 200px;
+    background-image: cover;
+    background-repeat: no-repeat;
+}
