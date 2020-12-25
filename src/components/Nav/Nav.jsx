@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
 import SideBarContainer from "../sideBar/SideBarContainer";
@@ -20,6 +20,9 @@ function Nav(state) {
         </div>
         <div className={s.item}>
             <NavLink to="/settings" activeClassName={s.active} >Settings</NavLink>
+        </div>
+        <div className={s.item}>
+            <NavLink to="/users" activeClassName={s.active} >Users</NavLink>
         </div>
         <SideBarContainer />
 
