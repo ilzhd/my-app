@@ -1,28 +1,50 @@
 import React from "react";
 import {connect} from "react-redux";
-import {followAC, setUsersAC, unFollowAC} from "../../redux/usersReducer";
 import Users from "./Users";
+import Preloader from "../common/preloader/preloader";
+import {
+    followed,
+    getUsers,
+    setCurrentPage,unfollowed
+} from "../../redux/usersReducer";
 
-let mapStateToProps = (state) =>{
-    return{
-        users: state.usersPage.users
+class UsersContainer extends React.Component {
+    componentDidMount() {
+        this.props.getUsers(this.props.currentPage, this.props.pageSize)
+    }
+
+    onPageChanged = (pageNumber) => {
+        this.props.getUsers(pageNumber, this.props.pageSize)
+    }
+
+    render = () => {
+        return <>
+            {this.props.isFetching ? <Preloader/> : null}
+            <Users users={this.props.users}
+                   followed={this.props.followed}
+                   unfollowed={this.props.unfollowed}
+                   totalUsersCount={this.props.totalUsersCount}
+                   pageSize={this.props.pageSize}
+                   onPageChanged={this.onPageChanged}
+                   currentPage={this.props.currentPage}
+                   followingInProgress={this.props.followingInProgress}
+
+            />
+        </>
     }
 }
 
-let mapDispatchToPropsToProps = (dispatch) =>{
-    return{
-        follow: (userId) =>{
-            dispatch(followAC(userId))
-        },
-        unfollow: (userId) =>{
-            dispatch(unFollowAC(userId))
-        },
-        setUsers: (users) =>{
-            dispatch(setUsersAC(users))
-        }
+
+let mapStateToProps = (state) => {
+    return {
+        users: state.usersPage.users,
+        pageSize: state.usersPage.pageSize,
+        totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage,
+        isFetching: state.usersPage.isFetching,
+        followingInProgress: state.usersPage.followingInProgress
     }
 }
-
-const UsersContainer = connect(mapStateToProps,mapDispatchToPropsToProps)(Users)
-
-export default UsersContainer;
+export default connect(mapStateToProps, {
+    setCurrentPage, getUsers, unfollowed, followed
+})(UsersContainer);

@@ -15,3 +15,13 @@
     border-radius: 20px;
 
 }
+
+.selectPage{
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+}
+
+.pageNumber{
+    cursor: pointer;
+}

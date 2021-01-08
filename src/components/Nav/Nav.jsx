@@ -24,6 +24,9 @@ function Nav(state) {
         <div className={s.item}>
             <NavLink to="/users" activeClassName={s.active} >Users</NavLink>
         </div>
+        <div className={s.item}>
+            <NavLink to="/ToDo" activeClassName={s.active} >My Tasks</NavLink>
+        </div>
         <SideBarContainer />
 
     </nav>

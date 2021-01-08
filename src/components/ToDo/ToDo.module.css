@@ -1,0 +1,10 @@
+.container{
+    margin: 0 auto;
+    display: grid;
+}
+
+.name{
+    color: white;
+    font-size: 20px;
+    flex-shrink: inherit;
+}
