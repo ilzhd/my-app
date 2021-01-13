@@ -1,31 +1,36 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {deleteTask, editTask, getTask, sendTask, updateTaskBody} from "../../redux/toDoReducer";
+import Preloader from "../common/preloader/preloader";
 import ToDo from "./ToDo";
-import {sendTask, updateTaskBody} from "../../redux/toDoReducer";
-import * as axios from "axios";
 
 class ToDoContainer extends React.Component {
     componentDidMount() {
-        // axios.get(`https://social-network.samuraijs.com/api/1.1/todo-lists`, {
-        //     withCredentials: true
-        // })
-        //     .then(response => {
-        //         this.props.updateTaskBody(response.data);
-        //     });
+        this.props.getTask()
     }
 
-    render() {
-        return <ToDo {...this.props}/>
+    render = () => {
+        if (this.props.isFetching === true) {
+            return <Preloader/>
+        } else {
+            return <ToDo task={this.props.task}
+                         newTaskBody={this.props.newTaskBody}
+                         updateTaskBody={this.props.updateTaskBody}
+                         getTask={this.props.getTask}
+                         sendTask={this.props.sendTask}
+                         deleteTask={this.props.deleteTask} editTask={this.props.editTask}/>
+        }
     }
 }
+
 
 let mapStateToProps = (state) => {
     return {
         task: state.toDo.task,
-        newTaskBody: state.toDo.newTaskBody
+        newTaskBody: state.toDo.newTaskBody,
+        isFetching: state.toDo.isFetching
     }
 }
 
 
-
-export default connect(mapStateToProps, {sendTask,updateTaskBody})(ToDoContainer)
+export default connect(mapStateToProps, {updateTaskBody, getTask, sendTask, deleteTask, editTask})(ToDoContainer)

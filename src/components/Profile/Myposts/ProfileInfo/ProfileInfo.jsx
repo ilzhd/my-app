@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from "../../../common/preloader/preloader";
+import ProfileStatus from "./ProfileStatus";
 
 function ProfileInfo(props) {
     if (!props.profile) {
@@ -10,24 +11,26 @@ function ProfileInfo(props) {
     for (const [key, value] of Object.entries(props.profile.contacts)) {
         contacts.push(value);
     }
-    return (
-        <div>
+        return (
             <div>
-                <div className={s.item}></div>
-            </div>
-            <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.large}/>
-                <p>{props.profile.fullName}</p>
-                <p>В поиске работы: {props.profile.lookingForAJobDescription}</p>
-                <p> Social:
-                    <p>{contacts.map(c=>{
-                        return <p><a href={c}>{c}</a></p>
-                    })}</p>
-                </p>
+                <div>
+                    <div className={s.item}></div>
+                </div>
+                <div className={s.descriptionBlock}>
+                    <img src={props.profile.photos.large}/>
+                    <p>{props.profile.fullName}</p>
+                    <ProfileStatus {...props}/>
+                    <p>В поиске работы: {props.profile.lookingForAJobDescription}</p>
+                    <p> Social:
+                        <p>{contacts.map(c => {
+                            return <p><a href={c}>{c}</a></p>
+                        })}</p>
+                    </p>
 
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 export default ProfileInfo;
+

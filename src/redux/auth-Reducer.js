@@ -1,6 +1,4 @@
 import {authApi, usersApi} from "../api/api";
-import {followSuccess, toggleFollowingProgress} from "./usersReducer";
-
 const SET_USER_DATA = 'SET_USER_DATA';
 
 
@@ -36,6 +34,13 @@ export const setUser = () => {
                 }
             });
     }
+}
+
+export const setLogin = (login, password, rememberMe) => (dispatch) =>{
+    authApi.login()
+        .then(data=>{
+            debugger
+        })
 }
 
 

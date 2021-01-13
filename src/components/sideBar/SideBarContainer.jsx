@@ -1,6 +1,4 @@
 import React from 'react';
-import s from './sideBar.module.css';
-import Friends from "./Friends";
 import {connect} from "react-redux";
 import SideBar from "./SideBar";
 

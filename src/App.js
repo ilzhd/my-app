@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Nav from "./components/Nav/Nav";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
@@ -10,6 +10,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import ToDoContainer from "./components/ToDo/ToDoContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 
 
@@ -31,7 +32,8 @@ function App(props) {
                     <Route path='/news' render = { () => <News />}/>
                     <Route path='/music' render = { () => <Music />}/>
                     <Route path='/settings' render = { () => <Settings />}/>
-                    <Route path='/ToDo' render={() => <ToDoContainer/> } />
+                    <Route path='/ToDo' render={ () => <ToDoContainer/> } />
+                    <Route path='/Login' render={() => <Login/> } />
                 </div>
             </div>
 

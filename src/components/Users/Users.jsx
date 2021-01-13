@@ -1,7 +1,7 @@
 import React from 'react';
 import userPhoto from '../../assets/images/user.png';
 import s from './Users.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink, Redirect} from "react-router-dom";
 
 let Users = (props) => {
     let pageNumber = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -9,6 +9,7 @@ let Users = (props) => {
     for (let i = 1; i <= pageNumber; i++) {
         page.push(i)
     }
+
     return <div className={s.container}>
         {
             props.users.map(u => {

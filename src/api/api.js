@@ -35,11 +35,62 @@ export const authApi = {
             .then(response => {
                 return response.data
             })
+    },
+    login (login, password, rememberMe, captcha) {
+        return instance.post(`auth/login`,{
+            email: login,
+            password,
+            rememberMe,
+            captcha
+
+        })
+            .then(response=>{
+                return response.data
+            })
     }
 }
 export const profileApi = {
-    setProfile (userId) {
+    getProfile (userId) {
         return instance.get(`profile/${userId}`)
+            .then(response => {
+                return response.data
+            })
+    },
+    getStatus (userId) {
+        return instance.get(`profile/status/${userId}`)
+            .then(response =>{
+                return response.data
+            })
+    },
+    updateStatus (status) {
+        return instance.put(`profile/status/`,{
+            status
+        })
+            .then(response =>{
+                return response.data
+            })
+    }
+}
+
+export const ToDoApi = {
+    getTask() {
+        return instance.get(`todo-lists/`)
+            .then(response => {
+                return response.data
+            })
+    },
+    postTask(title) {
+        return instance.post(`todo-lists/`, {
+            title
+        })
+    },
+    deleteTask(id) {
+        return instance.delete(`todo-lists/${id}`)
+    },
+    editTask(id,title){
+        return instance.put(`todo-lists/${id}`,{
+            title
+        })
             .then(response => {
                 return response.data
             })
