@@ -1,25 +1,26 @@
 import React from 'react';
 import s from './ToDo.module.css'
 import Task from "./Task";
+import {Field, reduxForm} from "redux-form";
+import handleSubmit from "redux-form/lib/handleSubmit";
 
 let ToDo = (props) => {
     let task = props.task;
-    let newTaskBody = props.newTaskBody;
 
-
-
-    let taskMessage = React.createRef()
-
-
-    let onSendTaskClick = () => {
-
-        let title = taskMessage.current.value;
-        props.sendTask(title)
+    const NewTask = (props) => {
+        return <form onSubmit={props.handleSubmit}>
+            <Field component={"textarea"} name={"title"}/>
+            <div>
+                <button>Send</button>
+            </div>
+        </form>
     }
 
-    let onNewTaskClick = (e) => {
-        let body = e.target.value;
-        props.updateTaskBody(body)
+    const NewReduxTask = reduxForm({form: "task"})(NewTask)
+
+
+    let onSendTaskClick = (values) =>{
+        props.sendTask(values.title)
     }
     return <div className={s.container}>
         <div className={s.name}>To DO list</div>
@@ -35,11 +36,7 @@ let ToDo = (props) => {
 
             }
         </div>
-        <textarea className={s.textarea} placeholder={'enter...'} value={newTaskBody} ref={taskMessage}
-                  onChange={onNewTaskClick}/>
-        <div>
-            <button onClick={onSendTaskClick}>Send</button>
-        </div>
+        <NewReduxTask onSubmit={onSendTaskClick}/>
     </div>
 }
 

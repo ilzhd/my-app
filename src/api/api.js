@@ -36,9 +36,9 @@ export const authApi = {
                 return response.data
             })
     },
-    login (login, password, rememberMe, captcha) {
+    login (email, password, rememberMe, captcha) {
         return instance.post(`auth/login`,{
-            email: login,
+            email,
             password,
             rememberMe,
             captcha
@@ -47,7 +47,13 @@ export const authApi = {
             .then(response=>{
                 return response.data
             })
-    }
+    },
+    logOut () {
+        return instance.delete(`auth/login`)
+            .then(response => {
+                return response.data
+            })
+    },
 }
 export const profileApi = {
     getProfile (userId) {
@@ -91,6 +97,15 @@ export const ToDoApi = {
         return instance.put(`todo-lists/${id}`,{
             title
         })
+            .then(response => {
+                return response.data
+            })
+    }
+}
+
+export const appApi = {
+    authMe () {
+        return instance.get(`auth/me`)
             .then(response => {
                 return response.data
             })

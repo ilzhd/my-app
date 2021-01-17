@@ -45,8 +45,8 @@ export const getTask = () => {
     return (dispatch) => {
         dispatch(toggleIsFetching(true));
         ToDoApi.getTask().then(data => {
-                dispatch(getTaskMessage(data))
-                dispatch(toggleIsFetching(false));
+                    dispatch(getTaskMessage(data))
+                    dispatch(toggleIsFetching(false));
             }
         )
     }
@@ -55,8 +55,9 @@ export const getTask = () => {
 export const sendTask = (title) => (dispatch) => {
     dispatch(toggleIsFetching(true));
     ToDoApi.postTask(title).then(response => {
-            dispatch(getTask())
-            dispatch(toggleIsFetching(false));
+            if (response.data.resultCode === 0) {
+                dispatch(getTask())
+            }
         }
     )
 }
@@ -64,8 +65,9 @@ export const sendTask = (title) => (dispatch) => {
 export const deleteTask = (taskId) => (dispatch) => {
     dispatch(toggleIsFetching(true));
     ToDoApi.deleteTask(taskId).then(response => {
-            dispatch(getTask())
-            dispatch(toggleIsFetching(false));
+            if (response.data.resultCode === 0) {
+                dispatch(getTask())
+            }
         }
     )
 }
@@ -73,8 +75,9 @@ export const editTask = (taskId, title) => (dispatch) => {
     debugger
     dispatch(toggleIsFetching(true));
     ToDoApi.editTask(taskId, title).then(data => {
-            dispatch(getTask())
-            dispatch(toggleIsFetching(false));
+            if (data.resultCode === 0) {
+                dispatch(getTask())
+            }
         }
     )
 }

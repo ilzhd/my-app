@@ -65,9 +65,11 @@ export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFe
 
 export const getUserProfile = (userId) =>{
     return (dispatch) =>{
+        dispatch(toggleIsFetching(true));
         profileApi.getProfile(userId)
             .then(data => {
                 dispatch(setUserProfile(data));
+                dispatch(toggleIsFetching(false));
             });
     }
 }

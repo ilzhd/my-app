@@ -5,40 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f458f46a-466f-4a19-8bb1-776583614702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Myposts/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ToDo/ToDo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/formsControl/formsControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/formsControl/formsControl.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hoc/AuthRedirect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validators/validators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/appReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/usersSelectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Myposts/Posts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Myposts/Posts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Myposts/Posts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Myposts/Posts/MyPostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Myposts/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Myposts/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/Task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/ToDo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDo/ToDoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/ToDoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDo/ToDo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDo/ToDo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideBar/SideBarContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/SideBarContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/preloader/preloader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/preloader/preloader.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-Reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-Reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/toDoReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/toDoReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/formsControl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -86,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common/formsControl" />
-      <recent name="$PROJECT_DIR$/src/components/Login" />
-      <recent name="$PROJECT_DIR$/src/components/Profile/Myposts/ProfileInfo" />
-      <recent name="$PROJECT_DIR$/src/components/Header" />
       <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/components/Login" />
+      <recent name="$PROJECT_DIR$/src/components/Header" />
+      <recent name="$PROJECT_DIR$/src/components/common/formsControl" />
+      <recent name="$PROJECT_DIR$/src/components/Profile/Myposts/ProfileInfo" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +131,11 @@
       <workItem from="1610092718427" duration="23629000" />
       <workItem from="1610253265862" duration="15925000" />
       <workItem from="1610335089330" duration="22063000" />
-      <workItem from="1610421996748" duration="18873000" />
+      <workItem from="1610421996748" duration="19308000" />
+      <workItem from="1610597532916" duration="16630000" />
+      <workItem from="1610685353255" duration="22464000" />
+      <workItem from="1610784265030" duration="750000" />
+      <workItem from="1610855480772" duration="454000" />
     </task>
     <servers />
   </component>

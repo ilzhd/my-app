@@ -112,8 +112,3 @@ export const followed = (userId) => {
 }
 
 export default usersReducer;
-
-
-
-
-
